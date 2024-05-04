@@ -1,0 +1,15 @@
+{
+  "name": "10_penzion",
+  "version": "1.0.0",
+  "description": "Poslední povinný úkol od Czechitas 2024",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx@11ty/eleventy",
+    "serve": "npx@11ty/eleventy --serve"
+  },
+  "author": "Věra Juračáková",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
