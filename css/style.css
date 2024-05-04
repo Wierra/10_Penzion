@@ -33,11 +33,19 @@ body {
 }
 
 .wrapper {
-	max-width: 66rem;
+	/* max-width: 56rem; */
 	margin: 0 auto;
 	background-color: white;
 }
 
+@media screen and (min-width: 1000px){
+	.wrapper {
+		max-width: 66rem;
+		/* margin: 0 auto;
+		background-color: white; */
+	}
+}
+	
 h1, h2, h3 {
 	font-family: var(--font-special);
 	font-weight: normal;
@@ -121,12 +129,19 @@ section {
 	color: var(--accent);
 }
 
-
 .header__inner {
 	padding: var(--spacer) var(--spacer-bigger);
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
+	display: block;
+	text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+	.header__inner {
+		padding: var(--spacer) var(--spacer-bigger);
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
 }
 
 .header__logo {
@@ -144,22 +159,32 @@ section {
 	vertical-align: baseline;
 }
 
+.header__address{
+	margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1000px) {
+	.header__address{
+		margin-bottom: 0;
+	}
+}
+
 .header__image {
 	min-height: 300px;
 	background: url(./../images/header-bg.jpg) no-repeat right center/cover;
 }
-
 /*
  **************************************
 	MENU
  **************************************
 */
-
 .menu__list {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .menu__item {
@@ -173,7 +198,7 @@ section {
 
 .menu__link {
 	display: block;
-	padding: var(--spacer-half) var(--spacer);
+	padding: var(--spacer-quarter) var(--spacer-half);
 	font-family: var(--font-special);
 	font-size: 18px;
 	font-weight: bold;
@@ -181,36 +206,56 @@ section {
 	color: black;
 }
 
-.menu__link:hover {
-	background-color: var(--accent);
+@media screen and (min-width: 800px) {
+	.menu__link {
+		padding: var(--spacer-half) var(--spacer);
+	}	
 }
 
 
-
+.menu__link:hover {
+	background-color: var(--accent);
+}
 /*
  **************************************
 	ABOUT - o penzionu
  **************************************
 */
-
-.about {
+.about{
 	box-shadow: inset 0 0 50px var(--grey-900);
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	gap: var(--spacer-bigger);
 }
 
-.about__content {
+.about__content{
 	grid-column: span 2;
 }
 
+.about__side{
+	grid-column: span 2;
+	justify-content: center;
+}
 
+@media screen and (min-width: 800px) {
+	.about {
+		box-shadow: inset 0 0 50px var(--grey-900);
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--spacer-bigger);
+	}	
+	.about__content {
+		grid-column: span 2;
+	}
+	.about__side{
+		grid-column: 3;
+	}
+}
 /*
  **************************************
 	TESTIMONIAL - reference klientů
  **************************************
 */
-
 .testimonial__bubble {
 	border-radius: var(--spacer);
 	padding: var(--spacer);
@@ -250,40 +295,56 @@ section {
 	font-size: 14px;
 	padding-left: var(--spacer);
 }
-
-
 /*
  **************************************
 	ROOMS-PREVIEW - přehled pokojů na HP
  **************************************
 */
-
 .room-preview p {
 	margin-bottom: 0;
 }
-
-
 /*
  **************************************
 	ROOMS - podrobný popis pokojů
  **************************************
 */
+.room__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
 
-.room {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: var(--spacer-bigger);
+.grid{
+	display: inline;
+}
+
+.grid__column{
+	padding: 20px;
 }
 
 .room:not(:last-child) {
 	margin-bottom: var(--spacer-double);
 }
 
-.room__description {
-	grid-column: span 2;
+@media screen and (min-width: 700px) {
+	.grid{
+		display: grid;
+	}
+	.grid__column{
+		padding: 0;
+	}
+	.room {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--spacer-bigger);
+	}
+	.room:not(:last-child) {
+		margin-bottom: var(--spacer-double);
+	}
+	.room__description {
+		grid-column: span 2;
+	}
 }
-
-
 /*
  **************************************
 	SERVICES - Služby a vybavení
@@ -292,6 +353,13 @@ section {
 .services__item {
 	display: flex;
 	align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+	.services .grid{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 .services__icon {
@@ -321,12 +389,16 @@ section {
 	font-size: 13px;
 }
 
-
 .services__title {
 	margin-top: calc(var(--spacer) * 3);
 }
 
-
+@media screen and (min-width: 800px) {
+	.services .grid{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
 
 /*
  **************************************
@@ -334,43 +406,49 @@ section {
  **************************************
 */
 
-.gallery__grid {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-auto-rows: 200px;
-	grid-auto-flow: dense;
-	gap: 1px;
+@media screen and (min-width: 700px) {
+	.gallery__grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-auto-rows: 200px;
+		grid-auto-flow: dense;
+		gap: 1px;
+	}
+	
+	.gallery__item {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	
+	.gallery__item:nth-child(5n+2) {
+		grid-column: span 2;
+		grid-row: span 2;
+	}
 }
-
-.gallery__item {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.gallery__item:nth-child(5n+2) {
-	grid-column: span 2;
-	grid-row: span 2;
-}
-
-
 /*
  **************************************
 	KONTAKT
  **************************************
 */
-
-.contact__grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: var(--spacer-bigger);
+.contact__grid-item h2{
+	margin-top: 40px;
 }
 
-.contact__title {
-	margin-top: var(--spacer-double);
+@media screen and (min-width: 700px) {
+	.contact__grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: var(--spacer-bigger);
+	}
+	
+	.contact__title {
+		margin-top: var(--spacer-double);
+	}
+	.contact__grid-item h2{
+		margin-top: 0;
+	}
 }
-
-
 /*
  **************************************
 	MAPA
@@ -379,14 +457,11 @@ section {
 .map {
 	padding: 0;
 }
-
-
 /*
  **************************************
 	FORMULAR
  **************************************
 */
-
 .form-field {
 	margin-bottom: var(--spacer);
 }
@@ -410,14 +485,11 @@ section {
 	color: red;
 	margin-left: 4px;
 }
-
-
 /*
  **************************************
 	FOOTER
  **************************************
 */
-
 .footer a {
 	color: white;
 }
@@ -432,8 +504,21 @@ section {
 	background-color: var(--grey-100);
 	color: white;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: var(--spacer-bigger);
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--spacer);
+
+}
+
+.grid--contact{
+	display: grid;
+	grid-column: span 2;
+	align-items: center;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.grid--contact h2, p{
+	margin: 0 0 5px 0;
 }
 
 .footer__copyright {
@@ -456,4 +541,34 @@ section {
 
 .footer__title {
 	color: var(--grey-700);
+}
+
+@media screen and (min-width: 600px) {
+	.footer__grid {
+		padding: var(--spacer-double) var(--spacer-bigger);
+		background-color: var(--grey-100);
+		color: white;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--spacer-bigger);
+	}
+	.footer__links {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.footer__links li:not(:last-child) {
+		margin-bottom: var(--spacer-quarter);
+	}
+	.grid--contact{
+		display: grid;
+		grid-column: 3;
+		margin-top: 0;
+		text-align: left;
+		align-content: flex-start;
+		
+	}
+	.grid--contact h2{
+		margin-bottom: 20px;
+	}
 }

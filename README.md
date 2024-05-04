@@ -1,7 +1,6 @@
 # Penzion u vody
 
 Povinný úkol pro kurz Staň se kóderkou od Czechitas.
-
 - [Cíl úkolu](#Cíl-úkolu)
 - [Bonusové úkoly](#Bonusové-úkoly)
 - [Jak si stáhnout podklady](#Jak-si-stáhnout-podklady)
@@ -14,7 +13,6 @@ Tentokrát jako podklad dostáváš kompletně nakódovaný web o pěti stránk�
 
 
 ## Cíl úkolu
-
 Cílem tohoto úkolu je hlavně vyzkoušet si základní práci s generátorem statických webů Eleventy:
 - **Práce s Eleventy**
   - součástí zadání je kompletně nakódovaný pětistránkový web (HTML, CSS, obrázky)
@@ -40,7 +38,6 @@ Cílem tohoto úkolu je hlavně vyzkoušet si základní práci s generátorem s
 
 
 ## Bonusové úkoly
-
 Kdyby ti chybělo kódování HTML a CSS a máš-li hotovou povinnou část úkolu, můžeš si s úkolem dál pohrát:
 
 - **Responzivní webdesign**
@@ -56,9 +53,7 @@ Kdyby ti chybělo kódování HTML a CSS a máš-li hotovou povinnou část úko
 
 
 ## Jak si stáhnout podklady
-
 1. Udělej si **fork** této repozitáře - tím se ti úkol zkopíruje do tvého GitHub profilu.
 2. Forknutou repozitář si naklonuj k sobě na disk.
 
 Pokud nevíš, co je to **fork repozitáře** a jak ho provést, podívej se na [krátké video](https://youtu.be/K7rE3jRCjD4).
-
