@@ -33,7 +33,6 @@ body {
 }
 
 .wrapper {
-	/* max-width: 56rem; */
 	margin: 0 auto;
 	background-color: white;
 }
@@ -41,8 +40,6 @@ body {
 @media screen and (min-width: 1000px){
 	.wrapper {
 		max-width: 66rem;
-		/* margin: 0 auto;
-		background-color: white; */
 	}
 }
 	
@@ -70,13 +67,11 @@ img {
 section {
 	padding: var(--spacer-double) var(--spacer-bigger);
 }
-
 /*
  **************************************
 	Univerzální 3 sloupcový grid
  **************************************
 */
-
 .grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -86,13 +81,11 @@ section {
 .grid__column--double {
 	grid-column: span 2;
 }
-
 /*
  **************************************
 	Tlačítko
  **************************************
 */
-
 .button {
 	padding: var(--spacer-half) var(--spacer-bigger);
 	background-color: var(--accent);
@@ -100,14 +93,11 @@ section {
 	border: 1px solid black;
 	cursor: pointer;
 }
-
-
 /*
  **************************************
 	HEADER
  **************************************
 */
-
 .header__contact {
 	padding: var(--spacer-half) var(--spacer-bigger);
 	font-size: 14px;
@@ -397,13 +387,11 @@ section {
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
-
 /*
  **************************************
 	GALLERY
  **************************************
 */
-
 @media screen and (min-width: 700px) {
 	.gallery__grid {
 		display: grid;
@@ -504,7 +492,6 @@ section {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: var(--spacer);
-
 }
 
 .grid--contact{
